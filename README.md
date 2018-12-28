@@ -144,7 +144,7 @@ getFileArray(): string[]
 
 ## Extending
 
-You can extend the behavior by extending the base class `SectionManager`. For example:
+You can extend the behavior by extending the base class `SectionManager`. For example, as shown in https://github.com/eeyang92/file-section-manager:
 
 ```typescript
 import * as fs from 'fs'

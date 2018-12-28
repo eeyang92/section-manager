@@ -8,6 +8,10 @@
     "name": "Eric Yang",
     "email": "eeyang92@gmail.com"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/eeyang92/section-manager.git"
+  },
   "license": "MIT",
   "keywords": [
     "section",
@@ -22,7 +26,7 @@
     "pub:latest": "git push --tags origin master && cd dist && npm publish",
     "pub:beta": "git push --tags origin beta && cd dist && npm publish --tag beta",
     "clear-dist": "rm -rf dist/*",
-    "build": "yarn clear-dist; yarn copy; NODE_ENV=production tsc",
+    "build": "yarn clear-dist && yarn copy && NODE_ENV=production tsc",
     "copy": "cp -rf package.json README.md LICENSE dist",
     "watch": "tsc -w"
   },
