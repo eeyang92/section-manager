@@ -1,0 +1,31 @@
+{
+  "name": "section-manager",
+  "version": "1.0.0",
+  "description": "Manage string sections",
+  "main": "dist/index.js",
+  "types": "dist/SectionManager.d.ts",
+  "author": {
+    "name": "Eric Yang",
+    "email": "eeyang92@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "section",
+    "management"
+  ],
+  "scripts": {
+    "pre-pub:patch": "yarn _pre-pub -- patch && yarn copy",
+    "pre-pub:minor": "yarn _pre-pub -- minor && yarn copy",
+    "pre-pub:major": "yarn _pre-pub -- major && yarn copy",
+    "_pre-pub": "yarn build && npm version -f",
+    "pub:latest": "git push --tags origin master && cd dist && npm publish",
+    "pub:beta": "git push --tags origin beta && cd dist && npm publish --tag beta",
+    "clear-dist": "rm -rf dist/*",
+    "build": "yarn clear-dist; yarn copy; NODE_ENV=production tsc",
+    "copy": "cp -rf package.json README.md LICENSE dist",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}

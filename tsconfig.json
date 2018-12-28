@@ -1,0 +1,9 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outDir": "dist",
+        "lib": ["es7"],
+        "declaration": true,
+        "target": "es5"
+    }
+}
