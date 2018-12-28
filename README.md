@@ -56,12 +56,12 @@ Bye!
 - This module exports `StringSectionManager` and `SectionManager`
     - It is recommended to use `StringSectionManager` as its constructor takes in a `string` as an argument and automatically assigns it to the internal array
 
-### `StringSectionManager`
+### StringSectionManager
 ```typescript
 StringSectionManager(fileString: string, options: SectionManagerOptions): StringSectionManager
 ```
 
-### `SectionManager`
+### SectionManager
 ```typescript
 StringSectionManager(options: SectionManagerOptions): SectionManager
 ```
@@ -80,12 +80,12 @@ type SectionManagerOptions = {
     - This setting can be overridden on the update methods
 - `sectionSyntax`: gives the developer control over the syntax for delimiting each section
     - Defaults:
-        - start: ``(name) => `<-- ${ name }``
-        - end: ``(name) => `--> ${ name }``
+        - start: ``(name) => `<-- ${ name }` ``
+        - end: ``(name) => `--> ${ name }` ``
 
 ### Methods
 
-#### `findSection`
+#### findSection
 ```typescript
 findSection(section: string): {
     startSection: number,
@@ -95,22 +95,22 @@ findSection(section: string): {
 }
 ```
 
-#### `findAndUpdateSection`
+#### findAndUpdateSection
 ```typescript
 findAndUpdateSection(section: string, sectionContentArray: string[], padding?: boolean): void
 ```
 
-#### `prependToSection`
+#### prependToSection
 ```typescript
 prependToSection(section: string, sectionContentArray: string[]): void
 ```
 
-#### `appendToSection`
+#### appendToSection
 ```typescript
 appendToSection(section: string, sectionContentArray: string[]): void
 ```
 
-#### `updateSection`
+#### updateSection
 - `updateSection` is more of an internal method, but it is exposed for cases that require manual control
 
 ```typescript
@@ -127,17 +127,17 @@ type UpdateSectionOptions = {
 }
 ```
 
-#### `setFileArray`
+#### setFileArray
 ```typescript
 setFileArray(fileArray: string[]): void
 ```
 
-#### `getFileArray`
+#### getFileArray
 ```typescript
 getFileArray(): string[]
 ```
 
-#### `toString`
+#### toString
 ```typescript
 toString(): string
 ```
