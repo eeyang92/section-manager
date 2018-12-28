@@ -1,5 +1,7 @@
 # Section Manager
 
+Lightweight section management of multi-line Strings, with no external dependencies.
+
 ## Installation
 
 - `npm install section-manager`, or
@@ -75,7 +77,7 @@ type SectionManagerOptions = {
 ```
 
 - `padding`: controls whether or not there should be a new line after the section start and before the section end
-    - This setting can be overriden on the update methods
+    - This setting can be overridden on the update methods
 - `sectionSyntax`: gives the developer control over the syntax for delimiting each section
     - Defaults:
         - start: ``(name) => `<-- ${ name }``

@@ -2,8 +2,8 @@
   "name": "section-manager",
   "version": "1.0.0",
   "description": "Manage string sections",
-  "main": "dist/index.js",
-  "types": "dist/SectionManager.d.ts",
+  "main": "SectionManager.js",
+  "types": "SectionManager.d.ts",
   "author": {
     "name": "Eric Yang",
     "email": "eeyang92@gmail.com"
@@ -11,6 +11,7 @@
   "license": "MIT",
   "keywords": [
     "section",
+    "manager",
     "management"
   ],
   "scripts": {
