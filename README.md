@@ -85,16 +85,6 @@ type SectionManagerOptions = {
 
 ### Methods
 
-#### findSection
-```typescript
-findSection(section: string): {
-    startSection: number,
-    endSection: number,
-    indentChars: number,
-    section: string[]
-}
-```
-
 #### findAndUpdateSection
 ```typescript
 findAndUpdateSection(section: string, sectionContentArray: string[], padding?: boolean): void
@@ -110,9 +100,24 @@ prependToSection(section: string, sectionContentArray: string[]): void
 appendToSection(section: string, sectionContentArray: string[]): void
 ```
 
-#### updateSection
-- `updateSection` is more of an internal method, but it is exposed for cases that require manual control
+#### toString
+```typescript
+toString(): string
+```
 
+The following are internal methods, but are exposed for cases that require manual control
+
+#### findSection
+```typescript
+findSection(section: string): {
+    startSection: number,
+    endSection: number,
+    indentChars: number,
+    section: string[]
+}
+```
+
+#### updateSection
 ```typescript
 updateSection(options: UpdateSectionOptions): void
 ```
@@ -135,11 +140,6 @@ setFileArray(fileArray: string[]): void
 #### getFileArray
 ```typescript
 getFileArray(): string[]
-```
-
-#### toString
-```typescript
-toString(): string
 ```
 
 ## Extending
